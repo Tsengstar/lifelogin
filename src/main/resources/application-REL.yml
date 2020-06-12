@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    #    show-sql: true
+    hibernate:
+      ddl-auto: none
+logging:
+  file:
+    path: classpath:log4j2.xml
+
+#jdbc
+life:
+  datasource:
+    druid:
+      name: lifeResource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/life?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password: 888888
+      validationQuery: select 1 from dual
+      initialSize: 1
+      max-active: 15
